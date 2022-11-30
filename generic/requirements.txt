@@ -1,0 +1,2 @@
+paho-mqtt==1.6.1
+PySocks==1.7.1

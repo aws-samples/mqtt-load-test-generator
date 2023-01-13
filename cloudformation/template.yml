@@ -148,6 +148,8 @@ Resources:
       LoggingConfiguration:
         DestinationBucketName: !Ref S3LoggingBucket
         LogFilePrefix: "IoT-logs/"
+      VersioningConfiguration:
+        Status: Enabled
 
   S3AthenaBucketPolicy:
     Type: AWS::S3::BucketPolicy

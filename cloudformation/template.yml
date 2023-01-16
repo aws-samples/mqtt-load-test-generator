@@ -187,6 +187,8 @@ Resources:
       LoggingConfiguration:
         DestinationBucketName: !Ref S3LoggingBucket
         LogFilePrefix: "Athena-logs/"
+      VersioningConfiguration:
+        Status: Enabled
 
   S3LoggingBucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -222,6 +224,8 @@ Resources:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
 
   IamRoleIotRule:
     Type: AWS::IAM::Role
